@@ -1,0 +1,107 @@
+.home{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    color: #dddddd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+    &__image{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 430px;
+        margin: auto;
+        img{
+            display: block;
+            max-width: 400px;
+            height: 250px;
+            min-width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 0 6px #8c8c8c;
+        }
+    }
+    &__body{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4rem 0 1rem;
+        width: 50%;
+        &-content{
+            margin-bottom: 3rem;
+            
+            &-titles{
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+                h3{
+                    font-size: 1.5rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+            &-description{
+                font-style: italic;
+            }
+        }
+        &-buttons{
+            &-categories{
+                background-color: #bababa;
+                color: #272727;
+                font-weight: 600;
+                font-style: italic;
+                height: 3rem;
+                width: 8rem;
+                margin-right: 1rem;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #c8c8c8;
+                    color: #111111;
+                    border:2px solid #111111;
+                    box-shadow: 0 0 2px #c8c8c8;
+                }
+            }
+            &-login{
+                background-color: #272727;
+                color: #bababa;
+                font-weight: 600;
+                font-style: italic;
+                height: 3rem;
+                width: 8rem;
+                margin-left: 1rem;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #111111;
+                    color: #c8c8c8;
+                    border:2px solid #c8c8c8;
+                }
+            }
+        }
+    }
+    svg{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:876px) {
+    .home{
+        &__image{
+            width: 60vw;
+            margin-top: 3rem;
+        }
+        &__body{
+            text-align: center;
+            width: 60vw;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+    }
+}
