@@ -7,6 +7,10 @@ import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { HomeImageComponent } from './home-image/home-image.component';
+import { WaveAnimationComponent } from './wave-animation/wave-animation.component';
+import { CarrouselPoemsComponent } from './carrousel-poems/carrousel-poems.component';
+import { DataService } from './data.service';
 
 
 const appRoutes: Routes=[
@@ -20,13 +24,18 @@ const appRoutes: Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    CategoriesComponent,
+    HomeImageComponent,
+    WaveAnimationComponent,
+    CarrouselPoemsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

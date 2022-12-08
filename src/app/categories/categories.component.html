@@ -1,1 +1,29 @@
-<p>categories works!</p>
+<div class="bodyCategories">
+    <div class="bodyCategories__types">
+        <div class="bodyCategories__types-title">
+            <p>Categorias</p>
+        </div>
+        <div class="bodyCategories__types-links">
+            <button class="bodyCategories__types-links-i-t" (click)="mostrarValor($event)" value="Todos">Todos</button>
+            <div class="bodyCategories__types-links-c">
+                <button class="bodyCategories__types-links-i" value="Romance" (click)="mostrarValor($event)">Romance</button>
+                <button class="bodyCategories__types-links-i" value="Despecho" (click)="mostrarValor($event)">Despecho</button>
+                <button class="bodyCategories__types-links-i" value="Alegria" (click)="mostrarValor($event)">Alegria</button>
+                <button class="bodyCategories__types-links-i" value="Soledad" (click)="mostrarValor($event)">Soledad</button>
+                <button class="bodyCategories__types-links-i" value="Despecho" (click)="mostrarValor($event)">Despecho</button>
+                <button class="bodyCategories__types-links-i" value="Alegria" (click)="mostrarValor($event)">Alegria</button>
+                <button class="bodyCategories__types-links-i" value="Romance" (click)="mostrarValor($event)">Romance</button>
+                <button class="bodyCategories__types-links-i" value="Despecho" (click)="mostrarValor($event)">Despecho</button>
+                <button class="bodyCategories__types-links-i" value="Ira" (click)="mostrarValor($event)">Ira</button>
+                <button class="bodyCategories__types-links-i" value="Despecho" (click)="mostrarValor($event)">Despecho</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bodyCategories__poems">
+        <div class="bodyCategories__poems-type"><p>{{typePoem}}</p></div>
+        <div class="bodyCategories__poems-cards">
+            <app-carrousel-poems [items]="items" ></app-carrousel-poems>
+        </div>
+    </div>
+</div>

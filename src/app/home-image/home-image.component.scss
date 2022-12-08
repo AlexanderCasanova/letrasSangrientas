@@ -1,0 +1,82 @@
+.homeImage {
+    width: 400px;
+    height: 250px;
+    &__box {
+        height: 250px;
+        width: 400px;
+        z-index: 2;
+
+        img {
+            position: relative;
+            border-radius: 5px;
+            z-index: 10;
+            width: 400px;
+            height: 250px;
+            box-shadow: 0px 5px 21px 1px rgba(255, 0, 0, 0.69);
+            -webkit-box-shadow: 0px 5px 21px 1px rgba(255, 0, 0, 0.69);
+            -moz-box-shadow: 0px 5px 21px 1px rgba(255, 0, 0, 0.69);
+            &:hover{
+                box-shadow: 0px 5px 25px 2px rgba(255, 0, 0, 0.88);
+                -webkit-box-shadow: 0px 5px 25px 2px rgba(255, 0, 0, 0.88);
+                -moz-box-shadow: 0px 5px 25px 2px rgba(255, 0, 0, 0.88);
+            }
+        }
+    }
+
+    &__drops {
+        opacity: 0;
+        animation: fade-in .1s linear .4s forwards;
+        -webkit-filter: url('#liquid');
+        filter: url('#liquid');
+        &-drop1,
+        &-drop2 {
+            width: 21px;
+            height: 24px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: rgba(255, 0, 0);
+            z-index: 15;
+        }
+
+        &-drop1 {
+            width: 90px;
+            height: 16px;
+            bottom: 2px;
+            border-radius: 0;
+        }
+
+        &-drop2 {
+            animation: drop 1.3s cubic-bezier(1, .19, .66, .12) .5s infinite;
+        }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drop {
+    0% {
+        bottom: 0px;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -180px;
+    }
+}

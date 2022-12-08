@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   routeCategorias():void{
-    this.route.navigate(['/categories']);
+    this.route.navigate(['/categories'],{queryParams:{filter:"Todos"}});
   }
 
   routeLogin():void{
